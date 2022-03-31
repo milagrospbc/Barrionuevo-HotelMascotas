@@ -1,7 +1,42 @@
 $cafe:#863303;
 $natural: #f7ebb5;
-$h-font: 'Roboto', sans-serif;
-$texto-font: 'Nunito', sans-serif;
+$bgboton: #863303;
+// $h-font: 'Roboto', sans-serif;
+// $texto-font: 'Nunito', sans-serif;
+
+$sizetextos:(
+    p: 0.9rem,
+    ppal: 2rem,
+    subt: 1.2rem,
+);
+
+$p: map-get( $sizetextos, p);
+$ppal: map-get( $sizetextos, ppal);
+$subt: map-get( $sizetextos, subt);
+
+@mixin boton ($bgboton){
+    text-align: center;
+    color: $natural;
+    margin: 1rem;
+    input{
+        border:solid $cafe 0.2rem;
+        border-radius: 2rem;
+        padding:0.2rem 2rem;
+        background-color: $cafe;
+        color: $natural;
+    }
+    input:hover{
+        border: solid $cafe 0.1rem;
+    background-color: $natural;
+    color:$cafe;
+    transform: scale(1.2);
+    }
+}
+
+.send {
+    @include boton ($bgboton)
+}
+
 
 *{
     margin: 0;
@@ -11,16 +46,17 @@ $texto-font: 'Nunito', sans-serif;
 
 body{
     background-color: $natural;
-    font-family: 'Nunito', sans-serif;
-    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    font-size: $p;
+}
 
-}
 h1{
-    font-family: 'Roboto', sans-serif;
-    font-size: 2rem;
+    font-family: 'Nunito', sans-serif;
+    font-size: $ppal;
 }
-h2,h3,h4,h5 {
-    font-family: 'Roboto', sans-serif;
+h2,h3,h4 {
+    font-family: 'Nunito', sans-serif;
+    font-size: $subt;
 }
 .navbar{
     color: $natural;
@@ -38,7 +74,7 @@ main{
     position: bottom;
     color: $cafe;
     background-color: whitesmoke;
-    font-size: 0.5rem;
+    font-size: $p;
 
 }
 .dato-foot{
@@ -294,26 +330,7 @@ PAGINA RESERVAS
     border: solid $cafe 0.2rem;
     border-radius: 2rem;
 }
-/* boton class send */
-.send{
-    font-family: $texto-font;
-    text-align: center;
-    color: $natural;
-    margin: 1rem;
-}
- .send input{
-    border: solid $cafe 0.2rem;
-    border-radius: 2rem;
-    padding:0.2rem 2rem;
-    background-color: $cafe;
-    color: $natural;
-}
-.send input:hover{
-    border: solid $cafe 0.1rem;
-    background-color: $natural;
-    color:$cafe;
-    transform: scale(1.2);
-}
+
 /* *************************************************************************************************************
 PAGINA CONTACTO
 *************************************************************************************************************** */
