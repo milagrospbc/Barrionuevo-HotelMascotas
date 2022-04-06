@@ -195,7 +195,8 @@ PAGINA NOSOTROS
   padding: 1rem; }
 
 .grid-nosotros__sect1 p {
-  padding: 4rem; }
+  padding: 4rem;
+  width: 70%; }
 
 /* nosotros seccion 2 */
 .grid-nosotros__sect2 {
@@ -218,7 +219,8 @@ PAGINA NOSOTROS
   grid-area: grid-nosotros__sect3; }
 
 #mapa {
-  height: 70vh; }
+  height: 70vh;
+  width: 95%; }
 
 /* *************************************************************************************************************
 PAGINA SERVICIOS
